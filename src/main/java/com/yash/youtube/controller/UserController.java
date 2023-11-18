@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.yash.youtube.model.Video;
-import com.yash.youtube.service.PostVideoService;
+import com.yash.youtube.service.UserService;
 
 @RestController
 @RequestMapping("/youtube")
-public class PostVideo {
+public class UserController {
     
     @Autowired
-    private PostVideoService pService;
+    private UserService pService;
 
     @GetMapping("/get/{id}")
     private Video getVideo(@PathVariable Integer id) {
